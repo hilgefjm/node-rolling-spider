@@ -193,6 +193,14 @@ Causes the drone to do an amazing left flip. **DO NOT USE WITH WHEELS ON!!!**
 
 Causes the drone to do an amazing right flip. **DO NOT USE WITH WHEELS ON!!!**
 
+#### client.fire([callback])
+
+Instructs the drone to fire the gun attachment. `callback` is invoked after firing is completed.
+
+#### client.openClaw([callback]) / client.closeClaw([callback]) / client.toggleClaw([callback])
+
+Instructs the drone to use the claw attachment. `callback` is invoked after the claw command is completed.
+
 #### client.calibrate([callback]) __or__ client.flatTrim([callback])
 
 Resets the trim so that your drone's flight is stable. It should always be
