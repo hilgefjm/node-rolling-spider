@@ -18,22 +18,14 @@ drone.connect((err) => {
     console.log('Connected');
     connected = true;
 
-    console.log('toggle claw');
-    drone.toggleClaw();
+    console.log('Firing gun');
+    drone.fire();
     setTimeout(() => {
-        console.log('toggle claw');
-        drone.toggleClaw();
+        console.log('Firing gun');
+        drone.fire();
         setTimeout(() => {
-            console.log('toggle claw');
-            drone.toggleClaw();
-            setTimeout(() => {
-                console.log('toggle claw');
-                drone.toggleClaw()
-                setTimeout(() => {
-                        drone.disconnect();
-                        process.exit(0);
-                    }, 3000);
-            }, 3000);
-        }, 3000);
-    }, 3000);
-});
+            drone.disconnect();
+            process.exit(0);
+        }, 5000);
+    }, 5000);
+})
